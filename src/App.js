@@ -39,7 +39,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <span onClick={this.toggleCart}>Cart (0)</span>
+        <span onClick={this.toggleCart} className="cartToggle">Cart ({this.state.lineItems.length})</span>
         {this.state.cartOpen &&
           <Cart lineItems={this.state.lineItems} />
         }
