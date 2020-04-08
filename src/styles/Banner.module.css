@@ -1,0 +1,22 @@
+/* Banner Module */
+.header {
+  height: 100vh;
+  padding: 20px 5%;
+  color: #52B45C;
+}
+
+.header h1 {
+  position: fixed;
+  top: 40px;
+  left: 5%;
+  margin: 0;
+}
+
+.header h2 {
+  color: black;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 30vh;
+  font-size:60px;
+  font-weight: normal;
+}

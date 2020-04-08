@@ -4,6 +4,7 @@ import db from './db';
 import Banner from './components/Banner';
 import Product from './components/Product';
 import Cart from './components/Cart';
+import Form from './components/Form';
 
 
 class App extends Component {
@@ -29,17 +30,26 @@ class App extends Component {
     })
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevState)
+  }
+
 
   render() {
+    
     return (
       <div className="App">
         <span onClick={this.toggleCart}>Cart (0)</span>
         {this.state.cartOpen &&
-          <Cart/>
+          <Cart lineItems={this.state.lineItems} />
         }
         
         <Banner banner={db.banner} />
-        {db.products.map((product, index) => <Product product={product} addToCart={this.addToCart} />)}
+        <Form/>
+        <div className="productList">
+          {db.products.map((product, index) => <Product product={product} addToCart={this.addToCart} key={`product-${index}`} />)}
+        </div>
+        
       </div>
     );
   }
