@@ -7,7 +7,7 @@ const db = {
   products: [
     {
       title: "chocolate donut", 
-      price: 2.50, 
+      price: 0.75, 
       imgUrl: "https://images.unsplash.com/photo-1562945431-ce2b63d5a7fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", 
       inventory: 4
     }, 

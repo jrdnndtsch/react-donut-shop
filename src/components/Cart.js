@@ -1,10 +1,14 @@
 import React from 'react';
 import LineItem from './LineItem';
 import styles from '../styles/Cart.module.css'
-import {displayPrice} from '../helpers';
+import {displayPrice, secondThing} from '../helpers';
+
 const Cart = (props) => {
   const {lineItems} = props;
-  const cartTotal = (lineItems) => lineItems.reduce((acc, next) => acc += next.price, 0);
+  const cartTotal = (lineItems) => {
+    return lineItems.reduce((acc, next) => acc += next.price, 0)
+  }
+
   return lineItems.length ? (
     <div className={styles.cart}>
       <ul>
